@@ -7,53 +7,51 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header" id="header">
-      <nav class="container nav">
-        <a href="#" class="nav__logo"> Alexa </a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="uil uil-estate nav__icon"></i> Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i> About
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i> Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i> Services
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i> Portfolio
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i> Contactme
-              </a>
-            </li>
-          </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
-        </div>
-        <div class="nav__btns">
-          <!-- theme change button -->
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
+    <div class="mod"></div>
+    <section class="startQuiz">
+      <h1 class="quizAppIntro">Quiz App</h1>
+      <input
+        type="number"
+        placeholder="Enter Number Of Question [1, 12]"
+        class="q_count"
+      />
+      <input
+        type="number"
+        class="count_down"
+        placeholder="Enter Time For Each Question in (seconds)"
+      />
+      <select title="Category" name="cat" class="qCatgs" id="category">
+        <option hidden value="">Choose Category</option>
+        <option value="9">General Knowledge</option>
+        <option value="18">Computers</option>
+        <option value="19">Maths</option>
+        <option value="23">History</option>
+        <option value="27">Animals</option>
+        <option value="28">Vehicles</option>
+      </select>
+      <button class="start_quiz">Start</button>
+    </section>
 
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
+    <section class="quiz_container">
+      <div class="quiz_info">
+        <div class="questions_category">
+          Category:
+          <span class="defCategory">&lt;&gt;</span>
         </div>
-      </nav>
-    </header>
+        <div class="questions_count">
+          Questions Count:
+          <span class="count">&lt;&gt;</span>
+        </div>
+      </div>
+
+      <div class="results"></div>
+      <div class="quiz_area"></div>
+      <div class="quiz_answers"></div>
+      <button class="submit_answer">Submit Answer</button>
+      <div class="bullets">
+        <div class="spans"></div>
+        <div class="count_down"></div>
+      </div>
+    </section>
   </body>
 </html>
